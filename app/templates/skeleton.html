@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+{% set navigation_bar = [
+    ('upload', 'upload', 'Start', 'fa fa-play-circle'),
+    ('process-mining', 'process-mining', 'Process Mining', 'fa fa-sitemap'),
+] -%}
+{% set active_page = active_page|default('upload') -%}
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>EY LAB - Process Mining</title>
+        <!-- Library CSS files -->
+        <!--<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css" lazyload />-->
+        <link href="{{ url_for('static', filename='assets/css/icons/icomoon/styles.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ url_for('static', filename='assets/css/bootstrap/bootstrap.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ url_for('static', filename='assets/css/font-awesome-4.6.3/css/font-awesome.min.css') }}" rel="stylesheet" />
+        <!-- Custum CSS files -->
+        <link href="{{ url_for('static', filename='assets/css/core.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ url_for('static', filename='assets/css/components.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ url_for('static', filename='assets/css/colors.css') }}" rel="stylesheet" type="text/css" />
+
+        <!-- Library JS files -->
+        <script type="text/javascript" src="{{ url_for('static', filename='assets/js/jquery/jquery-2.2.4.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='assets/js/bootstrap/bootstrap.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='assets/js/d3/d3.min.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='assets/js/highcharts/highcharts.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='assets/js/highcharts/highcharts-more.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='assets/js/highcharts/funnel.js') }}"></script>
+
+        <!-- EY CSS files -->
+        <link href="{{ url_for('static', filename='EYLabStyle/css/theme.css') }}" rel="stylesheet" type="text/css" />
+        <!-- SocketIO.js -->
+        <script type="text/javascript" src="{{ url_for('static', filename='js/socketio/socket.io.js') }}"></script>
+
+        <!-- Load app.js for this page -->
+        <script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+        <!-- /Load js -->
+    </head>
+
+    <body>
+        <div class='navbar-top'>
+            <!-- Main navbar -->
+            <div class="navbar-fixed-top">
+                <div class="navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <a id="EY_brand" href="{{ url_for('index') }}" class='navbar-brand'>
+                            <img src="{{ url_for('static', filename='EYLabStyle/images/brands/EY/EY_Logo_Beam_White_Yellow_C_CMYK.png') }}" alt="">
+                        </a>
+                        <ul class="nav navbar-nav visible-xs-block">
+                            <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5" ></i></a></li>
+                            <li><a class="sidebar-mobile-main-toggle"><i class="icon-paragraph-justify3"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="navbar-collapse collapse EY_navbar" id="navbar-mobile">
+                        <ul class="nav navbar-nav">
+                            <li><a class="sidebar-control sidebar-main-toggle hidden-xs"><i class="icon-paragraph-justify3"></i></a></li>
+                        </ul>
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown dropdown-user">
+                                <a class="dropdown-toggle" data-toggle="dropdown">
+                                    <span>EY Data Lab</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Hide multiple languages
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown language-switch">
+                                <a class="dropdown-toggle" data-toggle="dropdown">
+                                    <span>EN</span>
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">EN</a></li>
+                                    <li><a href="#">FR</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        -->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <a  href="{{ url_for('security.logout')}}">Logout</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /main navbar -->
+
+        <!-- Page container -->
+        <div class="page-container">
+            <!-- Page content -->
+            <div class="page-content">
+
+                <!-- Main sidebar -->
+                <div class="sidebar sidebar-main sidebar-fixed">
+                    <div class="sidebar-content">
+                        <!-- User menu -->
+                        <!-- /user menu -->
+                        <img class="" src="{{ url_for('static', filename='EYLabStyle/images/brands/EY/Logo_Lab_EY.png') }}" alt="">
+                        <!-- Main navigation -->
+                        <div class="sidebar-category sidebar-category-visible">
+                            <div class="category-content no-padding">
+                                <ul class="navigation myNavigation navigation-main navigation-accordion">
+                                    <!-- Main -->
+                                    <li class="navigation-header"><span><i class="fa fa-bars fa-bars-menu" aria-hidden="true"></i>Menu</span> </li>
+                                    {% for href, id, caption, icon in navigation_bar %}
+                                        <li{% if id == active_page %} class="active"{% endif %}>
+                                            <a href="{{ href|e }}">
+                                                <i class="{{ icon|e }}" aria-hidden="true"></i>
+                                                <span>{{ caption|e }}</span>
+                                            </a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- /main navigation -->
+                    </div>
+                </div>
+                <!-- /main sidebar -->
+
+                <!-- Main content -->
+                <div class="content-wrapper">
+
+                    <!-- Page header -->
+                    <div class="page-header page-header-default">
+                        Process Mining
+                    </div>
+                    <!-- /page header -->
+
+                    {% block pageContainer %}{% endblock %}
+
+                </div>
+                <!-- /main content -->
+
+            </div>
+            <!-- /page content -->
+        </div>
+        <!-- /page container -->
+    </body>
+</html>

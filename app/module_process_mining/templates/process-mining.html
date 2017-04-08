@@ -1,0 +1,151 @@
+{% extends "skeleton.html" %}
+{% set active_page = "process-mining" %}
+
+{% block pageContainer %}
+
+<!-- Load css for general css -->
+<link href="{{ url_for('process-mining.static', filename='style/process-mining.css') }}" rel="stylesheet" type="text/css" />
+<!-- /Load css -->
+
+<!-- Load js for this page -->
+
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/js/d3/d3.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/js/gojs/go.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/js/gojs/CurvedLinkReshapingTool.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/js/3d/utils.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/js/3d/utils2.js') }}"></script>
+    <!--<script type="text/javascript" src="{{ url_for('static', filename='assets/js/slider/jquery-1.12.4.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='assets/js/slider/jquery-ui.js') }}"></script>-->
+
+
+<script type="text/javascript" src="{{ url_for('process-mining.static', filename='js/process-mining.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/utils.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/gojs-utils.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/processmining.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/processmining-fakegraphs.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/graph.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/graphe.js') }}"></script>
+<!-- /Load js -->
+
+<!-- Content area -->
+<div class="content">
+    <div class="cssload">
+        <div class="cssload-loader">
+	        <div class="cssload-inner cssload-one"></div>
+	        <div class="cssload-inner cssload-two"></div>
+	        <div class="cssload-inner cssload-three"></div>
+        </div>
+    </div>
+
+    <!-- Breadcrumbs -->
+    <div class="row">
+        <div class="btn-group btn-breadcrumb" id="breadcrumb"></div>
+    </div>
+    <hr />
+
+    <div class="row">
+        <!-- Left -->
+        <div class="col-lg-6">
+            <!-- Panel graph -->
+            <div class="panel panel-flat">
+                <div class="panel-heading">
+                    <div class="panelHeadingIcon"><i class="fa fa-sitemap fa-lg"></i></div>
+                    <div class="panelHeadingTxt"><span class="panel-title">Process graph</span></div>
+                </div>
+                <div id="sliderArea">
+                    <div id="slider-range" style="height:50px;">
+                      <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                    </div>
+                </div>
+                <div class="panel-body" id="myDiagramDiv">
+                    <p>Coucou</p>
+                </div>
+            </div>
+        </div>
+
+         <!-- Right -->
+        <div class="col-lg-6">
+            <!-- Panel Nb events per user -->
+            <div class="panel panel-flat">
+                <div class="panel-heading">
+                    <div class="panelHeadingIcon"><i class="fa fa-bar-chart fa-lg"></i></div>
+                    <div class="panelHeadingTxt"><span class="panel-title">Number of events per day</span></div>
+                </div>
+                <div class="panel-body">
+                    <div id="chartNbEventsPerDay"></div>
+                </div>
+            </div>
+
+            <!-- Panel Nb events per user -->
+            <div class="col-lg-6">
+                <div class="panel panel-flat">
+                    <div class="panel-heading">
+                        <div class="panelHeadingIcon"><i class="fa fa-pie-chart fa-lg"></i></div>
+                        <div class="panelHeadingTxt"><span class="panel-title">Number of events per user</span></div>
+                        <div class="heading-elements">
+                            <span class="label heading-text"></span>
+                            <ul class="icons-list">
+                                <li class="dropdown">
+                                    <a data-toggle="modal" href="#nbEventsPerUserModal"><i class="fa fa-arrows fa-lg"></i>></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chartNbEventsPerUser"></div>
+                        <div class="modal" id="nbEventsPerUserModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">x</button>
+                                        <h4 class="modal-title">Number of events per user</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="chartNbEventsPerUserModal"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panel Nb events per event type -->
+            <div class="col-lg-6">
+                <div class="panel panel-flat">
+                    <div class="panel-heading">
+                        <div class="panelHeadingIcon"><i class="fa fa-pie-chart fa-lg"></i></div>
+                        <div class="panelHeadingTxt"><span class="panel-title">Number of events per event type</span></div>
+                        <div class="heading-elements">
+                            <span class="label heading-text"></span>
+                            <ul class="icons-list">
+                                <li class="dropdown">
+                                    <a data-toggle="modal" href="#nbEventsPereventtypeModal"><i class="fa fa-arrows fa-lg"></i>></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="chartNbEventsPerEventtype"></div>
+                        <div class="modal" id="nbEventsPereventtypeModal">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">x</button>
+                                        <h4 class="modal-title">Number of events per event type</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div id="chartNbEventsPerEventtypeModal"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Content area -->
+
+{% endblock %}
