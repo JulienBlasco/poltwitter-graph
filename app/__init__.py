@@ -1,55 +1,39 @@
-from flask import Flask, redirect
+#! /usr/bin/python
+# -*- coding:utf-8 -*-
+
+from PIL import Image
+from io import BytesIO
+from flask import Flask, render_template, make_response, redirect, url_for
 from flask_socketio import SocketIO
-from flask_sqlalchemy import SQLAlchemy
-import pandas as pd
+from datetime import date
 
-# to make flask less verbose
-# import logging
-# log = logging.getLogger('werkzeug')
-# log.setLevel(logging.ERROR)
-
-# App, socketio and SQLAlchemy db definition
 app = Flask(__name__)
-socketio = SocketIO()
+# socketio = SocketIO()
+# socketio.init_app(app)
 
-app.config.from_object('app.config')
-db = SQLAlchemy(app)
-
-# user_datastore definition
-from flask_security import SQLAlchemyUserDatastore
-from app.module_security.models import User, Role
-
-user_datastore = SQLAlchemyUserDatastore(db, User, Role)
-
-
-# App creation function, will be used in process-mining.py
-def create_app(appli):
-    from app.module_process_mining import model
-    # General configuration
-    appli.config.from_object('app.config')  # General Configuration
-
-    # Security module launching
-    from flask_security import Security
-    appli.config['SECURITY_URL_PREFIX'] = '/security'
-    appli.config['SECURITY_POST_LOGIN_VIEW'] = 'process-mining/'
-    appli.config['SECURITY_UNAUTHORIZED_VIEW'] = None
-    Security(appli, user_datastore, register_blueprint=True)
-
-    # Process Mining module launching
-    from app.module_process_mining import mod_proc_mining
-    appli.register_blueprint(mod_proc_mining)
-
-    # SQLAlchemy initialization
-    db.init_app(appli)
-
-    # Socketio initialization
-    socketio.init_app(appli)
-
-    model.PandasProcessModel.set_process_data(pd.read_csv("data/event_log.csv"))
-
-    return appli
+@app.route("/")
+@app.route('/<nom>')
+def accueil(nom="visiteur"):
+    d = date.today().isoformat()
+    mots = ["bonjour", "à", "toi,", nom+"."]
+    return render_template('accueil.html', titre="Bienvenue !", mots=mots, date=d)
 
 
-@app.route('/')
-def index():
-    return redirect('/security/login', code=302)
+@app.context_processor
+def passer_ingredient():
+    return dict(ingredient="caramel")
+
+
+@app.route('/image')
+def genere_image():
+    mon_image = BytesIO()
+    Image.new("RGB", (300,300), "#92C41D").save(mon_image, 'BMP')
+    reponse = make_response(mon_image.getvalue(),404)
+    reponse.mimetype = "image/bmp"
+    return reponse
+    #return redirect(url_for("accueil", nom="Jean-Michel"))
+
+
+@app.errorhandler(404)
+def ma_page_404(error):
+    return "Ma jolie page 404", 404
