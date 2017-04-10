@@ -1,0 +1,35 @@
+{% extends "skeleton.html" %}
+{% set active_page = "Graph" %}
+
+{% block pageContainer %}
+
+<script src={{ url_for('static', filename='js/plugins/sigmajs/sigma.min.js') }}></script>
+<script src={{ url_for('static', filename="js/plugins/sigmajs/sigma.parsers.json.min.js") }}></script>
+<script src={{ url_for('static', filename="js/plugins/sigmajs/sigma.parsers.gexf.min.js") }}></script>
+<script>
+  sigma.parsers.gexf(
+    '/static/JLM_light_subgraph.gexf',
+    { // Here is the ID of the DOM element that
+      // will contain the graph:
+      container: 'sigma-container'
+    }
+  );
+</script
+</script>
+
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i>Sigma.js example</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="flot-chart">
+                                    <div class="flot-chart-content" id="sigma-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+{% endblock %}
