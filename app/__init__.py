@@ -8,15 +8,22 @@ from flask_socketio import SocketIO
 from datetime import date
 
 app = Flask(__name__)
-# socketio = SocketIO()
-# socketio.init_app(app)
+socketio = SocketIO()
+socketio.init_app(app)
 
 @app.route("/")
+def blank():
+    return render_template("blank-page.html")
+
+@app.route('/graphe')
+def render_graph():
+    return render_template("graphe.html")
+
 @app.route('/<nom>')
 def accueil(nom="visiteur"):
     d = date.today().isoformat()
     mots = ["bonjour", "à", "toi,", nom+"."]
-    return render_template('accueil.html', titre="Bienvenue !", mots=mots, date=d)
+    return render_template('index.html', titre="Bienvenue !", mots=mots, date=d)
 
 
 @app.context_processor
