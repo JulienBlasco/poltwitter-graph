@@ -11,24 +11,28 @@ app = Flask(__name__)
 socketio = SocketIO()
 socketio.init_app(app)
 
-@app.route("/")
-def blank():
-    return render_template("blank-page.html")
-
-@app.route('/graphe')
-def render_graph():
-    return render_template("graphe.html")
-
-@app.route('/<nom>')
-def accueil(nom="visiteur"):
-    d = date.today().isoformat()
-    mots = ["bonjour", "à", "toi,", nom+"."]
-    return render_template('index.html', titre="Bienvenue !", mots=mots, date=d)
-
 
 @app.context_processor
 def passer_ingredient():
     return dict(ingredient="caramel")
+
+
+@app.route("/")
+def blank():
+    return render_template("index.html")
+
+
+@app.route('/Bienvenue/<nom>')
+def accueil(nom="visiteur"):
+    d = date.today().isoformat()
+    mots = ["bonjour", "à", "toi,", nom+"."]
+    return render_template('accueil.html', titre="Bienvenue !", mots=mots, date=d)
+
+
+@app.route("/<page>")
+@app.route("/<page>.html")
+def specific_page(page):
+    return render_template(page+".html")
 
 
 @app.route('/image')
