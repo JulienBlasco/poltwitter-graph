@@ -2,475 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7e6ff28-3aff-41f7-834b-3d53546a0afd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/app.db" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/config.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/module_process_mining/.ipynb_checkpoints/test_model-checkpoint.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/module_process_mining/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/module_process_mining/controller.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/module_process_mining/event_log_simple_graph.graphml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/module_process_mining/events.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/module_process_mining/model.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/module_process_mining/static/js/process-mining.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/module_process_mining/static/style/process-mining.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/module_process_mining/templates/process-mining.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/module_process_mining/test_graph.graphml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/module_process_mining/test_model.ipynb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/module_process_mining/test_pandasprocessmodel.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/module_process_mining/utils.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/module_security/__init__.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/module_security/controllers.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/module_security/models.py" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/css/theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/fonts/EYInterstate-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/fonts/EYInterstate-BoldItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/fonts/EYInterstate-Italic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/fonts/EYInterstate-Light.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/fonts/EYInterstate-LightBold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/fonts/EYInterstate-LightBoldItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/fonts/EYInterstate-LightItalic.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/fonts/EYInterstate-Regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/background/blur/Blur-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/background/blur/Blur-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/background/blur/Blur-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/background/blur/Blur-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/background/blur/Blur-4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/background/boxed/boxed_bg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/background/boxed/boxed_bg_retina.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/background/seamless/seamless.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/brands/EY/EY_Logo_Beam_White_Yellow_C_CMYK.eps" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/brands/EY/EY_Logo_Beam_White_Yellow_C_CMYK.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/brands/EY/Logo_Lab.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/brands/EY/Logo_Lab1.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/brands/EY/Logo_Lab2.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/brands/EY/Logo_Lab_EY.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/brands/EY/image.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/brands/EY/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/brands/EY/logo_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/brands/EY/logo_demo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/brands/EY/logo_icon_dark.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/brands/EY/logo_icon_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/brands/EY/logo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/brands/EY/signature.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/EYLabStyle/images/covers/login_cover.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/bootstrap/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/bootstrap/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/colors.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/components.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/core.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/HELP-US-OUT.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/css/font-awesome.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/fonts/fontawesome-webfont.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/less/animated.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/less/bordered-pulled.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/less/core.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/less/fixed-width.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/less/font-awesome.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/less/icons.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/less/larger.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/less/list.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/less/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/less/path.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/less/rotated-flipped.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/less/screen-reader.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/less/stacked.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/less/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/scss/_animated.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/scss/_bordered-pulled.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/scss/_core.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/scss/_fixed-width.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/scss/_icons.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/scss/_larger.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/scss/_list.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/scss/_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/scss/_path.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/scss/_rotated-flipped.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/scss/_screen-reader.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/scss/_stacked.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/scss/_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/font-awesome-4.6.3/scss/font-awesome.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/icons/glyphicons/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/icons/glyphicons/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/icons/glyphicons/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/icons/glyphicons/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/icons/glyphicons/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/icons/icomoon/fonts/icomoon.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/icons/icomoon/fonts/icomoon.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/icons/icomoon/fonts/icomoon.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/icons/icomoon/fonts/icomoon.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/css/icons/icomoon/styles.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/brands/adwords.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/brands/amazon.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/brands/bing.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/brands/dribbble.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/brands/facebook.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/brands/spotify.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/brands/tripadvisor.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/brands/twitter.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/brands/youtube.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/cover.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/cover2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/cover3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/cover4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/10.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/11.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/14.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/15.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/16.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/17.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/18.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/19.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/20.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/21.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/22.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/23.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/24.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/25.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/7.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/8.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/flat/9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/images/1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/images/10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/images/2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/images/3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/images/4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/images/5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/images/6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/images/7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/images/8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/images/9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/images/for_crop.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/logo_light.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face13.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face14.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face15.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face16.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face17.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face18.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face19.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face20.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face21.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face22.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face23.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face24.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face25.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face5.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face6.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face7.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face8.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/users/face9.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/video1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/demo/video2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ad.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ae.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/af.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ag.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ai.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/al.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/am.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/an.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ao.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ar.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/as.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/at.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/au.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/aw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ax.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/az.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ba.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/bb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/bd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/be.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/bf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/bg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/bh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/bi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/bj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/bm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/bn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/bo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/br.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/bs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/bt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/bv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/bw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/by.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/bz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ca.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/catalonia.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/cc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/cd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/cf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/cg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ch.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ci.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ck.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/cl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/cm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/cn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/co.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/cr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/cs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/cu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/cv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/cx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/cy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/cz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/de.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/dj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/dk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/dm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/do.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/dz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ec.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ee.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/eg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/eh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/england.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/er.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/es.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/et.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/europeanunion.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/fam.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/fi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/fj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/fk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/fm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/fo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/fr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ga.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/gb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/gd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ge.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/gf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/gh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/gi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/gl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/gm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/gn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/gp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/gq.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/gr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/gs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/gt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/gu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/gw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/gy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/hk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/hm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/hn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/hr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ht.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/hu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/id.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ie.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/il.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/in.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/io.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/iq.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ir.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/is.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/it.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/jm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/jo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/jp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ke.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/kg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/kh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ki.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/km.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/kn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/kp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/kr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/kw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ky.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/kz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/la.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/lb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/lc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/li.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/lk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/lr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ls.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/lt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/lu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/lv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ly.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ma.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/mc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/md.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/me.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/mg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/mh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/mk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ml.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/mm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/mn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/mo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/mp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/mq.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/mr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ms.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/mt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/mu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/mv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/mw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/mx.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/my.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/mz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/na.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/nc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ne.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/nf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ng.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ni.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/nl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/no.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/np.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/nr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/nu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/nz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/om.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/pa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/pe.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/pf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/pg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ph.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/pk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/pl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/pm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/pn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/pr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ps.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/pt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/pw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/py.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/qa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/re.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ro.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/rs.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ru.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/rw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/sa.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/sb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/sc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/scotland.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/sd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/se.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/sg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/sh.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/si.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/sj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/sk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/sl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/sm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/sn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/so.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/sr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/st.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/sv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/sy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/sz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/tc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/td.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/tf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/tg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/th.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/tj.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/tk.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/tl.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/tm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/tn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/to.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/tr.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/tt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/tv.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/tw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/tz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ua.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ug.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/um.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/us.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/uy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/uz.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/va.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/vc.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ve.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/vg.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/vi.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/vn.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/vu.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/wales.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/wf.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ws.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/ye.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/yt.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/za.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/zm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/flags/zw.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/jqueryui/animated-overlay.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/jqueryui/ui-bg_flat_0_aaaaaa_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/jqueryui/ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/jqueryui/ui-bg_glass_55_fbf9ee_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/jqueryui/ui-bg_glass_65_ffffff_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/jqueryui/ui-bg_glass_75_dadada_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/jqueryui/ui-bg_glass_75_e6e6e6_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/jqueryui/ui-bg_glass_95_fef1ec_1x400.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/jqueryui/ui-bg_highlight-soft_75_cccccc_1x100.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/jqueryui/ui-icons_222222_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/jqueryui/ui-icons_2e83ff_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/jqueryui/ui-icons_454545_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/jqueryui/ui-icons_888888_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/jqueryui/ui-icons_cd0a0a_256x240.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/pnotify/danger.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/pnotify/default.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/pnotify/info.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/pnotify/success.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/pnotify/warning.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/ui/datepicker_trigger.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/images/ui/map_marker.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/js/bootstrap/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/js/d3/d3.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/js/gojs/CurvedLinkReshapingTool.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/js/gojs/go.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/js/highcharts/funnel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/js/highcharts/highcharts-all.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/js/highcharts/highcharts-more.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/js/highcharts/highcharts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/js/jquery/jquery-2.2.4.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/assets/js/jquery/jquery-2.2.4.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/js/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/js/socketio/socket.io.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/security/js/login_user.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/static/security/style/login_user.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/templates/security/_macros.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/templates/security/_messages.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/templates/security/login_user.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/templates/skeleton.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/appli_graphe.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/charts.html" afterPath="$PROJECT_DIR$/app/templates/charts.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -480,49 +13,120 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="poltwitter-graph" />
+  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+    <leaf>
       <file leaf-file-name="appli-graphe.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/appli-graphe.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="125">
-              <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+              <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            <state relative-caret-position="300">
+              <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+              <folding>
+                <element signature="e#43#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="charts.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/charts.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="325">
+              <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="accueil.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/accueil.html">
+      <file leaf-file-name="graphe.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/graphe.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mon_style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/static/mon_style.css">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state relative-caret-position="-150">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index-rtl.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/index-rtl.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="457">
+              <caret line="27" column="88" lean-forward="false" selection-start-line="27" selection-start-column="88" selection-end-line="27" selection-end-column="88" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tables.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/templates/tables.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-150">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blank-page.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/blank-page.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap-elements.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/bootstrap-elements.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-150">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap-grid.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/bootstrap-grid.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-150">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>url_for</find>
+      <find>{{</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -534,6 +138,8 @@
         <option value="$PROJECT_DIR$/app/module_process_mining/test_model.ipynb" />
         <option value="$PROJECT_DIR$/appli-graphe.py" />
         <option value="$PROJECT_DIR$/app/__init__.py" />
+        <option value="$PROJECT_DIR$/app/templates/index-rtl.html" />
+        <option value="$PROJECT_DIR$/app/templates/charts.html" />
       </list>
     </option>
   </component>
@@ -559,25 +165,26 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Projet info" />
+              <option name="myItemId" value="poltwitter-graph" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Projet info" />
+              <option name="myItemId" value="poltwitter-graph" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Projet info" />
+              <option name="myItemId" value="poltwitter-graph" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Projet info" />
+              <option name="myItemId" value="poltwitter-graph" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -587,11 +194,11 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Projet info" />
+              <option name="myItemId" value="poltwitter-graph" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Projet info" />
+              <option name="myItemId" value="poltwitter-graph" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -603,31 +210,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Projet info" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Projet info" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="E:/EY Analytics/- PROCESS MINING" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -745,16 +333,34 @@
       <option name="presentableId" value="Default" />
       <updated>1491664425759</updated>
     </task>
+    <task id="LOCAL-00001" summary="changement gestion pages">
+      <created>1491832084337</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1491832084337</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17916666" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.253125" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31164384" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22146119" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -767,12 +373,35 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28767124" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22146119" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.253125" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changement gestion pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="changement gestion pages" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -781,6 +410,32 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/appli-graphe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/accueil.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+          <folding>
+            <element signature="e#43#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/appli-graphe.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="25">
@@ -793,7 +448,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#43#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -813,39 +470,100 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#43#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/module_process_mining/controller.py" />
-    <entry file="file://$PROJECT_DIR$/appli-graphe.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="24" lean-forward="true" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/static/mon_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/mon_style.css" />
     <entry file="file://$PROJECT_DIR$/app/templates/accueil.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+        <state relative-caret-position="225">
+          <caret line="9" column="64" lean-forward="false" selection-start-line="9" selection-start-column="64" selection-end-line="9" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        <state relative-caret-position="300">
+          <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+          <folding>
+            <element signature="e#43#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/appli-graphe.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/blank-page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="6" column="36" lean-forward="true" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/bootstrap-elements.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/bootstrap-grid.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/charts.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="22" column="25" lean-forward="true" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/graphe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/index-rtl.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="27" column="88" lean-forward="false" selection-start-line="27" selection-start-column="88" selection-end-line="27" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/tables.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-150">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
