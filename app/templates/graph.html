@@ -8,6 +8,167 @@
 <script src={{ url_for('static', filename="js/plugins/sigmajs/sigma.parsers.gexf.min.js") }}></script>
 <script src={{ url_for('static', filename="js/plugins/sigmajs/sigma.layout.forceAtlas2.min.js") }}></script>
 
+<script>
+    ;(function(undefined) {
+
+  /**
+   * Sigma Node Border Custom Renderer
+   * ==================================
+   *
+   * The aim of this simple node renderer is to enable the user to display
+   * colored node borders.
+   *
+   * Author: Guillaume Plique (Yomguithereal)
+   * Version: 0.0.1
+   */
+
+  sigma.canvas.nodes.border = function(node, context, settings) {
+    var prefix = settings('prefix') || '';
+
+    context.fillStyle = node.color || settings('defaultNodeColor');
+    context.beginPath();
+    context.arc(
+     node[prefix + 'x'],
+     node[prefix + 'y'],
+     node[prefix + 'size'],
+     0,
+     Math.PI * 2,
+     true
+    );
+
+    context.closePath();
+    context.fill();
+
+    context.lineWidth = node.borderWidth || 1;
+    context.strokeStyle = '#fff';
+    context.stroke();
+  };
+}).call(this);
+</script>
+<script>
+function print_edges() {
+    s.graph.edges().forEach(function(edge) {
+      edge.hidden = !(document.forms.display_edges.Checkboxedges.checked);
+    });
+    s.refresh();
+}
+</script>
+<script>
+function print_clusters() {
+
+    var checkedBoxes = document.querySelectorAll('input[name=Checkboxclusters]:checked');
+    var list_of_clusters = []
+    for (var item of checkedBoxes) {
+     list_of_clusters.push(item.value)
+    }
+    s.graph.nodes().forEach(function(node) {
+      node.hidden = !(list_of_clusters.includes(JSON.stringify(node.attributes.modularity_class)));
+    });
+    s.refresh();
+}
+</script>
+
+                        <form name="display_edges">
+                            <div class="form-group">
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" name="Checkboxedges"
+                                    onClick="print_edges()">Afficher arêtes
+                                </label>
+                            </div>
+                        </form>
+
+<!--                       <form name="display_clusters">
+                            <div class="form-group">
+                            <label>Choix des clusters</label>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="checkCluster16"
+                                            name="Checkboxclusters"    checked="checked" value="16">Gouvernement
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="checkCluster0"
+                                             name="Checkboxclusters"   checked="checked" value="0">LR
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="checkCluster5"
+                                            name="Checkboxclusters"    checked="checked" value="5">PS & Ecolos
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="checkCluster2"
+                                           name="Checkboxclusters"     checked="checked" value="2">Divers 2
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="checkCluster11"
+                                            name="Checkboxclusters"    checked="checked" value="11">EM
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="checkCluster4"
+                                            name="Checkboxclusters"   checked="checked" value="4">FN
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="checkCluster15"
+                                            name="Checkboxclusters"   checked="checked" value="15">Divers 1
+                                    </label>
+                                </div>
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="checkCluster10"
+                                             name="Checkboxclusters"  checked="checked" value="10">FI
+                                    </label>
+                                </div>
+                            </div>
+                        </form>-->
+
+                        <form name="display_clusters">
+                            <div class="form-group">
+                            <label>Choix des clusters</label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="checkCluster16"
+                                            name="Checkboxclusters"    checked="checked" value="16">Gouvernement
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="checkCluster0"
+                                             name="Checkboxclusters"   checked="checked" value="0">LR
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="checkCluster5"
+                                            name="Checkboxclusters"    checked="checked" value="5">PS & Ecolos
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="checkCluster2"
+                                           name="Checkboxclusters"     checked="checked" value="2">Divers 2
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="checkCluster11"
+                                            name="Checkboxclusters"    checked="checked" value="11">EM
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="checkCluster4"
+                                            name="Checkboxclusters"   checked="checked" value="4">FN
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="checkCluster15"
+                                            name="Checkboxclusters"   checked="checked" value="15">Divers 1
+                                    </label>
+                                    <label class="checkbox-inline">
+                                        <input type="checkbox" id="checkCluster10"
+                                             name="Checkboxclusters"  checked="checked" value="10">FI
+                                    </label>
+                            </div>
+                        </form>
+
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="panel panel-primary">
@@ -22,24 +183,110 @@
                         </div>
                     </div>
                 </div>
+<script>
+document.getElementById("checkCluster16").addEventListener ("click", print_clusters, false);
+document.getElementById("checkCluster0").addEventListener ("click", print_clusters, false);
+document.getElementById("checkCluster5").addEventListener ("click", print_clusters, false);
+document.getElementById("checkCluster2").addEventListener ("click", print_clusters, false);
+document.getElementById("checkCluster11").addEventListener ("click", print_clusters, false);
+document.getElementById("checkCluster4").addEventListener ("click", print_clusters, false);
+document.getElementById("checkCluster15").addEventListener ("click", print_clusters, false);
+document.getElementById("checkCluster10").addEventListener ("click", print_clusters, false);
+</script>
 
+<script>
+  // Add a method to the graph model that returns an
+  // object with every neighbors of a node inside:
+  sigma.classes.graph.addMethod('neighbors', function(nodeId) {
+    var k,
+        neighbors = {},
+        index = this.allNeighborsIndex[nodeId] || {};
+
+    for (k in index)
+      neighbors[k] = this.nodesIndex[k];
+
+    return neighbors;
+  });
+
+</script>
 <script>
 var s = new sigma();
 
 s.addRenderer({
   container: 'sigma-container',
-  edgeColor: 'default',
-});
-
-sigma.parsers.gexf(
-'/static/Hamon_enriched.gexf',
-s,
-function() {
-    s.refresh();
-}
+  type: 'canvas'
+  }
 );
 
-s.startForceAtlas2();
+s.settings('minNodeSize', 0.001);
+s.settings('maxNodeSize', 4);
+s.refresh()
+
+sigma.parsers.gexf(
+'/static/Big_component_reduced.gexf',
+s,
+function(graph) {
+    s.graph.nodes().forEach(function(node) {
+        node.type = 'border';
+    });
+    s.graph.edges().forEach(function(edge) {
+      edge.hidden = true;
+    });
+      // We first need to save the original colors of our
+      // nodes and edges, like this:
+      s.graph.nodes().forEach(function(n) {
+        n.originalColor = n.color;
+      });
+      s.graph.edges().forEach(function(e) {
+        e.originalColor = e.color;
+      });
+
+      // When a node is clicked, we check for each node
+      // if it is a neighbor of the clicked one. If not,
+      // we set its color as grey, and else, it takes its
+      // original color.
+      // We do the same for the edges, and we only keep
+      // edges that have both extremities colored.
+      s.bind('clickNode', function(e) {
+        var nodeId = e.data.node.id,
+            toKeep = s.graph.neighbors(nodeId);
+        toKeep[nodeId] = e.data.node;
+
+        s.graph.nodes().forEach(function(n) {
+          if (toKeep[n.id])
+            n.color = n.originalColor;
+          else
+            n.color = '#eee';
+        });
+
+        s.graph.edges().forEach(function(e) {
+          if (e.source==nodeId || e.target==nodeId)
+            e.color = e.originalColor;
+          else
+            e.color = '#eee';
+        });
+
+        // Since the data has been modified, we need to
+        // call the refresh method to make the colors
+        // update effective.
+        s.refresh();
+  });
+      // When the stage is clicked, we just color each
+      // node and edge with its original color.
+      s.bind('clickStage', function(e) {
+        s.graph.nodes().forEach(function(n) {
+          n.color = n.originalColor;
+        });
+
+        s.graph.edges().forEach(function(e) {
+          e.color = e.originalColor;
+        });
+
+        // Same as in the previous event:
+        s.refresh();
+  });
+}
+);
 
 </script>
 
