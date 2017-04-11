@@ -6,16 +6,7 @@
 <script src={{ url_for('static', filename='js/plugins/sigmajs/sigma.min.js') }}></script>
 <script src={{ url_for('static', filename="js/plugins/sigmajs/sigma.parsers.json.min.js") }}></script>
 <script src={{ url_for('static', filename="js/plugins/sigmajs/sigma.parsers.gexf.min.js") }}></script>
-<script>
-  sigma.parsers.gexf(
-    '/static/JLM_light_subgraph.gexf',
-    { // Here is the ID of the DOM element that
-      // will contain the graph:
-      container: 'sigma-container'
-    }
-  );
-</script
-</script>
+<script src={{ url_for('static', filename="js/plugins/sigmajs/sigma.layout.forceAtlas2.min.js") }}></script>
 
                 <div class="row">
                     <div class="col-lg-12">
@@ -31,5 +22,25 @@
                         </div>
                     </div>
                 </div>
+
+<script>
+var s = new sigma();
+
+s.addRenderer({
+  container: 'sigma-container',
+  edgeColor: 'default',
+});
+
+sigma.parsers.gexf(
+'/static/Hamon_enriched.gexf',
+s,
+function() {
+    s.refresh();
+}
+);
+
+s.startForceAtlas2();
+
+</script>
 
 {% endblock %}
