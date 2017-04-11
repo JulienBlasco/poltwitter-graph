@@ -215,5 +215,10 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 
-# Gephi
+# Graph files
 *.gephi
+*.gexf
+
+#Output
+/output
+
