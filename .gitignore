@@ -219,5 +219,5 @@ pip-log.txt
 *.gephi
 
 #Output
-output
-
+output/
+app/static/data/
