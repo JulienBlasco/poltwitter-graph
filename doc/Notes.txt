@@ -1,0 +1,10 @@
+- Début du rapport
+- Test avec le gros graphe et si besoin faire les découpages nécessaires pour qu'il soit affichable avec le plus de points possibles
+- Deuxième onglet --> statistiques sur les communautés
+	. stats chiffrées (nombre de followers moyen, nb de tweets moyen)
+	. rappel de la gueule du cluster en question
+	. détecter des sous-communautés ?
+	. statistiques de densité, histogramme des degrés
+- Troisième onglet --> essayer de faire des oppositions avec les données texte
+- Voir s'il existe une API Gephi pour les algos de spatialisation et clustering
+- 
