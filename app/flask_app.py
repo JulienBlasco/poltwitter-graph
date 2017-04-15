@@ -1,10 +1,8 @@
 #! /usr/bin/python
 # -*- coding:utf-8 -*-
 
-from io import BytesIO
 from flask import Flask, render_template, make_response, redirect, url_for
 # from flask_socketio import SocketIO
-from datetime import date
 
 app = Flask(__name__)
 # socketio = SocketIO()
