@@ -2,51 +2,54 @@
 * ON GRAPH LOADING
 */
 function implement_clickfunction(s) {
-      // We first need to save the original colors of our
-      // nodes and edges, like this:
-      s.graph.nodes().forEach(function(n) {
-        n.originalColor = n.color;
-      });
-      s.graph.edges().forEach(function(e) {
-        e.originalColor = e.color;
-      });
-
-      // When a node is clicked, we check for each node
-      // if it is a neighbor of the clicked one. If not,
-      // we set its color as grey, and else, it takes its
-      // original color.
-      // We do the same for the edges, and we only keep
-      // edges that have both extremities colored.
-      s.bind('clickNode', function(e) {
-        var nodeId = e.data.node.id,
-            toKeep = s.graph.neighbors(nodeId);
-        toKeep[nodeId] = e.data.node;
-
-        s.graph.nodes().forEach(function(n) {
-          if (toKeep[n.id])
-            n.color = n.originalColor;
-          else
-            n.color = '#eee';
-        });
-
-        s.graph.edges().forEach(function(e) {
-          if (e.source==nodeId || e.target==nodeId)
-            e.color = e.originalColor;
-          else
-            e.color = '#eee';
-        });
+  // We first need to save the original colors of our
+  // nodes and edges, like this:
+  s.graph.nodes().forEach(function(n) {
+    n.color = "rgb(" + [n.r,n.g,n.b].join(",") + ")";
+    n.originalColor = n.color;
   });
-      // When the stage is clicked, we just color each
-      // node and edge with its original color.
-      s.bind('clickStage', function(e) {
-        s.graph.nodes().forEach(function(n) {
-          n.color = n.originalColor;
-        });
-
-        s.graph.edges().forEach(function(e) {
-          e.color = e.originalColor;
-        });
+  s.graph.edges().forEach(function(e) {
+    e.color = "rgba(" + [e.r,e.g,e.b,"0.4"].join(",") + ")";
+    e.originalColor = e.color;
   });
+
+  // When a node is clicked, we check for each node
+  // if it is a neighbor of the clicked one. If not,
+  // we set its color as grey, and else, it takes its
+  // original color.
+  // We do the same for the edges, and we only keep
+  // edges that have both extremities colored.
+  s.bind('clickNode', function(e) {
+    var nodeId = e.data.node.id,
+        toKeep = s.graph.neighbors(nodeId);
+    toKeep[nodeId] = e.data.node;
+
+    s.graph.nodes().forEach(function(n) {
+      if (toKeep[n.id])
+        n.color = n.originalColor;
+      else
+        n.color = '#eee';
+    });
+
+    s.graph.edges().forEach(function(e) {
+      if (e.source==nodeId || e.target==nodeId)
+        e.color = e.originalColor;
+      else
+        e.color = '#eee';
+    });
+  });
+  // When the stage is clicked, we just color each
+  // node and edge with its original color.
+  s.bind('clickStage', function(e) {
+    s.graph.nodes().forEach(function(n) {
+      n.color = n.originalColor;
+    });
+
+    s.graph.edges().forEach(function(e) {
+      e.color = e.originalColor;
+    });
+  });
+  print_pageranks(1-parseFloat(document.getElementById("pr-range").value));
 }
 
 
@@ -158,6 +161,20 @@ function print_edges() {
 }
 
 
+function print_nodes() {
+    var list_of_clusters = compute_clusters();
+    var q = compute_quantile();
+    s.graph.nodes_to_display = [];
+    s.graph.nodes().forEach(function(node) {
+      if (node.pagerank >= q && list_of_clusters.includes(node.modularity_class)){
+        node.hidden = false;
+      } else {
+        node.hidden = true;
+        s.graph.nodes_to_display(push(node.id))
+      }
+    });
+}
+
 function print_clusters() {
     var checkedBoxes = document.querySelectorAll('input[name=Checkboxclusters]:checked');
     var list_of_clusters = []
@@ -165,21 +182,31 @@ function print_clusters() {
      list_of_clusters.push(item.value)
     }
     s.graph.nodes().forEach(function(node) {
-      node.hidden = !(list_of_clusters.includes(JSON.stringify(node.attributes.modularity_class)));
+      node.hidden = !(list_of_clusters.includes(JSON.stringify(node.modularity_class)));
     });
     s.refresh();
 }
 
 function print_pageranks(t) {
     var list_of_pageranks = jQuery.map(s.graph.nodes(), function(element) {
-        return element.attributes.d16;
+        return element.pagerank;
     });
+    var q = quantile(list_of_pageranks, t)
+    s.graph.nodes_to_display = [];
     s.graph.nodes().forEach(function(node) {
-      if (node.attributes.d16 >= quantile(list_of_pageranks,t)) {
+      if (node.pagerank >= q) {
         node.hidden = false;
+        s.graph.nodes_to_display.push(node)
       } else {
         node.hidden = true;
       }
+    });
+    s.refresh();
+}
+
+function transparent_edges() {
+    s.graph.edges().forEach(function(edge) {
+      edge.color = "rgba(192, 192, 192, 0.1)";;
     });
     s.refresh();
 }
