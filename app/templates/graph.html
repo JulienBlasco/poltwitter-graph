@@ -7,8 +7,17 @@
 <script src={{ url_for('static', filename="js/plugins/sigmajs/sigma.parsers.json.min.js") }}></script>
 <script src={{ url_for('static', filename="js/plugins/sigmajs/sigma.parsers.gexf.min.js") }}></script>
 <script src={{ url_for('static', filename="js/plugins/sigmajs/sigma.layout.forceAtlas2.min.js") }}></script>
+
 <script src={{ url_for('static', filename="js/my_script.js") }}></script>
 
+
+                        <form name="display_pageranks">
+                            <div class="form-group">
+                                <input type="range" name="Range" id="pr-range"
+                                       value="0.50"max="1" min="0" step="0.05"
+                                       onchange="print_pageranks(1-parseFloat(this.value));">
+                            </div>
+                        </form>
 
                         <form name="display_edges">
                             <div class="form-group">
@@ -18,60 +27,6 @@
                                 </label>
                             </div>
                         </form>
-
-<!--                       <form name="display_clusters">
-                            <div class="form-group">
-                            <label>Choix des clusters</label>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" id="checkCluster16"
-                                            name="Checkboxclusters"    checked="checked" value="16">Gouvernement
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" id="checkCluster0"
-                                             name="Checkboxclusters"   checked="checked" value="0">LR
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" id="checkCluster5"
-                                            name="Checkboxclusters"    checked="checked" value="5">PS & Ecolos
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" id="checkCluster2"
-                                           name="Checkboxclusters"     checked="checked" value="2">Divers 2
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" id="checkCluster11"
-                                            name="Checkboxclusters"    checked="checked" value="11">EM
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" id="checkCluster4"
-                                            name="Checkboxclusters"   checked="checked" value="4">FN
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" id="checkCluster15"
-                                            name="Checkboxclusters"   checked="checked" value="15">Divers 1
-                                    </label>
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" id="checkCluster10"
-                                             name="Checkboxclusters"  checked="checked" value="10">FI
-                                    </label>
-                                </div>
-                            </div>
-                        </form>-->
 
                         <form name="display_clusters">
                             <div class="form-group">
@@ -135,6 +90,13 @@ document.getElementById("checkCluster4").addEventListener ("click", print_cluste
 document.getElementById("checkCluster15").addEventListener ("click", print_clusters, false);
 document.getElementById("checkCluster10").addEventListener ("click", print_clusters, false);
 </script>
+
+<!--<script>-->
+    <!--range_button = document.getElementById("pr-range")-->
+    <!--range_button.addEventListener ("click", function() {-->
+        <!--console.log(range_button.value);-->
+    <!--}, false);-->
+<!--</script>-->
 
 <script>
     /**
