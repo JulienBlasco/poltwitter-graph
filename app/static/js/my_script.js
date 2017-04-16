@@ -63,6 +63,20 @@ function load_graph(s) {
 /**
 * GRAPH CUTTING ON SIZE OF NODES
 */
+
+/**
+* FUNCTION: ascending( a, b )
+*	Comparator function used to sort values in ascending order.
+*
+* @private
+* @param {Number} a
+* @param {Number} b
+* @returns {Number} difference between `a` and `b`
+*/
+function ascending( a, b ) {
+	return a - b;
+} // end FUNCTION ascending()
+
 // QUANTILE //
 
 /**
@@ -97,7 +111,6 @@ function quantile( arr, p, opts ) {
 		if ( opts.hasOwnProperty( 'method' ) && typeof opts.method !== 'string' ) {
 			throw new TypeError( 'quantile()::invalid input argument. Method must be a string.' );
 		}
-		// TODO: validate that the requested method is supported. list.indexOf( method )
 	} else {
 		opts = {};
 	}
@@ -131,6 +144,8 @@ function quantile( arr, p, opts ) {
 	id = Math.ceil( id );
 	return arr[ id ];
 } // end FUNCTION quantile()
+
+
 /**
 ** DISPLAY FUNCTIONS IN VIZ
 */
@@ -155,4 +170,16 @@ function print_clusters() {
     s.refresh();
 }
 
-
+function print_pageranks(t) {
+    var list_of_pageranks = jQuery.map(s.graph.nodes(), function(element) {
+        return element.attributes.d16;
+    });
+    s.graph.nodes().forEach(function(node) {
+      if (node.attributes.d16 >= quantile(list_of_pageranks,t)) {
+        node.hidden = false;
+      } else {
+        node.hidden = true;
+      }
+    });
+    s.refresh();
+}
