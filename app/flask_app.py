@@ -1,17 +1,19 @@
 #! /usr/bin/python
 # -*- coding:utf-8 -*-
 
-from flask import Flask, render_template, make_response, redirect, url_for
-# from flask_socketio import SocketIO
+from flask import Flask, render_template, send_from_directory, make_response, redirect, url_for
 
 app = Flask(__name__)
-# socketio = SocketIO()
-# socketio.init_app(app)
 
 
 @app.route("/")
 def blank():
     return render_template("index.html")
+
+
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory('static', 'favicon.ico')
 
 
 @app.route("/<page>")
