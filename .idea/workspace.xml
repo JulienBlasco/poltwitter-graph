@@ -6,7 +6,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/Notes.docx" afterPath="$PROJECT_DIR$/doc/Notes.docx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/flask_app.py" afterPath="$PROJECT_DIR$/app/flask_app.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/js/my_script.js" afterPath="$PROJECT_DIR$/app/static/js/my_script.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/graph.html" afterPath="$PROJECT_DIR$/app/templates/graph.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doc/reu 29_03.txt" afterPath="$PROJECT_DIR$/doc/reu 29_03.txt" />
     </list>
@@ -457,7 +456,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492331649980</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="transparency + start combine filters">
+      <created>1492387186631</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1492387186631</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -507,7 +513,8 @@
     <MESSAGE value="add favicon" />
     <MESSAGE value="add own css" />
     <MESSAGE value="add slider" />
-    <option name="LAST_COMMIT_MESSAGE" value="add slider" />
+    <MESSAGE value="transparency + start combine filters" />
+    <option name="LAST_COMMIT_MESSAGE" value="transparency + start combine filters" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

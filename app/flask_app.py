@@ -1,10 +1,14 @@
 #! /usr/bin/python
 # -*- coding:utf-8 -*-
 
-from flask import Flask, render_template, send_from_directory, make_response, redirect, url_for
+from flask import Flask, jsonify, render_template, send_from_directory, make_response, redirect, url_for
+from app import model
+import networkx as nx
 
 app = Flask(__name__)
 
+app.graph = model.graphData(nx.read_graphml("app/static/data/Big_component_enriched.graphml"))
+app.data = app.graph.json_data()
 
 @app.route("/")
 def blank():
@@ -14,6 +18,11 @@ def blank():
 @app.route("/favicon.ico")
 def favicon():
     return send_from_directory('static', 'favicon.ico')
+
+
+@app.route("/data.json")
+def data_json():
+    return jsonify(app.data)
 
 
 @app.route("/<page>")

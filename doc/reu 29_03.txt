@@ -1,4 +1,3 @@
 - il reste un mois
 - compter le nombre de retweets total
-
 - code visu sur petit graphe pour le 12/05
