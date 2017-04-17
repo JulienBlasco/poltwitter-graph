@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 from flask import Flask, jsonify, render_template, send_from_directory, make_response, redirect, url_for
-from app import model
+import model
 import networkx as nx
 
 app = Flask(__name__)

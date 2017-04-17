@@ -1,4 +1,4 @@
-from app import flask_app
+import flask_app
 #from app import socketio
 
 if __name__ == '__main__':
