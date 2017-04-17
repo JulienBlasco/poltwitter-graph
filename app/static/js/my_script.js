@@ -9,7 +9,7 @@ function implement_clickfunction(s) {
     n.originalColor = n.color;
   });
   s.graph.edges().forEach(function(e) {
-    e.color = "rgba(" + [e.r,e.g,e.b,"0.4"].join(",") + ")";
+    e.color = "rgba(" + [e.r,e.g,e.b,"0.1"].join(",") + ")";
     e.originalColor = e.color;
   });
 

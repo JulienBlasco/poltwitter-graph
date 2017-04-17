@@ -4,7 +4,6 @@
     <list default="true" id="d7e6ff28-3aff-41f7-834b-3d53546a0afd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/js/my_script.js" afterPath="$PROJECT_DIR$/app/static/js/my_script.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/graph.html" afterPath="$PROJECT_DIR$/app/templates/graph.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -546,7 +545,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492453907982</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="change slider appearance">
+      <created>1492470697734</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1492470697734</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -603,7 +609,8 @@
     <MESSAGE value="use screen_name instead of name (readability)" />
     <MESSAGE value="fixed filters" />
     <MESSAGE value="automatic clusters boxes" />
-    <option name="LAST_COMMIT_MESSAGE" value="automatic clusters boxes" />
+    <MESSAGE value="change slider appearance" />
+    <option name="LAST_COMMIT_MESSAGE" value="change slider appearance" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
