@@ -12,9 +12,108 @@
 
 <script src={{ url_for('static', filename="js/my_script.js") }}></script>
 
-                </span>
+</span>
+
+<style>
+input[type=range] {
+  -webkit-appearance: none;
+  width: 50%;
+  margin: 13.8px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 8.4px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+
+</style>
+                <div class="jumbotron">
+                    <p>Ce graphe a été obtenu à partir de données récupérées sur Twitter durant les six derniers mois. Il a été construit de la manière suivante :</p>
+                    <ul>
+                    <li>Chaque noeud est le compte Twitter d'une personnalité, d'un parti ou d'une institution de la scène politique française. On compte environ 2500 noeuds dans ce graphe.</li>
+                    <li>Un lien est tracé d'un noeud X vers un noeud Y si le compte X a retweeté le compte Y au moins une fois durant les six derniers mois.</li>
+                    </ul>
+                </div>
+
+
                         <form name="display_pageranks">
                             <div class="form-group">
+                            Déplacer le curseur vers la gauche pour n'afficher que les noeuds les plus importants.
                                 <input type="range" name="Range" id="pr-range"
                                        value="0.1"max="1" min="0" step="0.05"
                                        onchange="print_pageranks(1-parseFloat(this.value));">
@@ -76,7 +175,7 @@
                     <div class="col-lg-12">
                         <div class="panel panel-primary">
                             <div class="panel-heading">
-                                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i>Sigma.js example</h3>
+                                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Graphe des retweets</h3>
                             </div>
                             <div class="panel-body">
                                 <div class="flot-chart">
