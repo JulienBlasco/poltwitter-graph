@@ -49,18 +49,24 @@ function implement_clickfunction(s) {
       e.color = e.originalColor;
     });
   });
-  print_pageranks(1-parseFloat(document.getElementById("pr-range").value));
 }
 
 
 function load_graph(s) {
+    s.graph.list_of_clusters = [];
     s.graph.nodes().forEach(function(node) {
         node.type = 'border';
+        if (!s.graph.list_of_clusters.includes(node.modularity_class)) {
+            s.graph.list_of_clusters.push(node.modularity_class)
+        }
     });
     s.graph.edges().forEach(function(edge) {
       edge.hidden = true;
     });
     implement_clickfunction(s);
+    s.graph.threshold = 0;
+    print_pageranks(1-parseFloat(document.getElementById("pr-range").value));
+    print_clusters();
 }
 
 /**
@@ -179,11 +185,23 @@ function print_clusters() {
     var checkedBoxes = document.querySelectorAll('input[name=Checkboxclusters]:checked');
     var list_of_clusters = []
     for (var item of checkedBoxes) {
-     list_of_clusters.push(item.value)
+     list_of_clusters.push(parseInt(item.value))
     }
-    s.graph.nodes().forEach(function(node) {
-      node.hidden = !(list_of_clusters.includes(JSON.stringify(node.modularity_class)));
-    });
+    if (list_of_clusters.length < s.graph.list_of_clusters.length) {
+        s.graph.nodes().forEach(function(node) {
+          if (!(list_of_clusters.includes(node.modularity_class))) {
+            node.hidden = true;
+          }
+        });
+    } else {
+        s.graph.nodes().forEach(function(node) {
+          if (list_of_clusters.includes(node.modularity_class)
+          && node.pagerank >= s.graph.threshold) {
+            node.hidden = false;
+          }
+        });
+    }
+    s.graph.list_of_clusters = list_of_clusters;
     s.refresh();
 }
 
@@ -192,15 +210,21 @@ function print_pageranks(t) {
         return element.pagerank;
     });
     var q = quantile(list_of_pageranks, t)
-    s.graph.nodes_to_display = [];
-    s.graph.nodes().forEach(function(node) {
-      if (node.pagerank >= q) {
-        node.hidden = false;
-        s.graph.nodes_to_display.push(node)
-      } else {
-        node.hidden = true;
-      }
+    if (q >= s.graph.threshold) {
+        s.graph.nodes().forEach(function(node) {
+          if (node.pagerank <= q) {
+            node.hidden = true;
+          }
+        });
+    } else {
+        s.graph.nodes().forEach(function(node) {
+          if (node.pagerank >= q
+          && s.graph.list_of_clusters.includes(node.modularity_class)) {
+            node.hidden = false;
+          }
     });
+    }
+    s.graph.threshold = q;
     s.refresh();
 }
 

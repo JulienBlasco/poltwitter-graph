@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d7e6ff28-3aff-41f7-834b-3d53546a0afd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model.py" afterPath="$PROJECT_DIR$/app/model.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/static/js/my_script.js" afterPath="$PROJECT_DIR$/app/static/js/my_script.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/graph.html" afterPath="$PROJECT_DIR$/app/templates/graph.html" />
     </list>
@@ -448,7 +447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492425812940</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="use screen_name instead of name (readability)">
+      <created>1492448046859</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1492448046859</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -502,7 +508,8 @@
     <MESSAGE value="load graph in backend" />
     <MESSAGE value="gestion plusieurs graphes" />
     <MESSAGE value="moved appli-graphe.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved appli-graphe.py" />
+    <MESSAGE value="use screen_name instead of name (readability)" />
+    <option name="LAST_COMMIT_MESSAGE" value="use screen_name instead of name (readability)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
