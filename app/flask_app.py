@@ -8,8 +8,8 @@ import networkx as nx
 app = Flask(__name__)
 
 index_to_path = {
-    "1": "app/static/data/Big_component_enriched.graphml",
-    "2": "app/static/data/Big_component_reduced.graphml"
+    "1": "static/data/Big_component_enriched.graphml",
+    "2": "static/data/Big_component_reduced.graphml"
 }
 
 app.graph = {
