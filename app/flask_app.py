@@ -7,12 +7,25 @@ import networkx as nx
 
 app = Flask(__name__)
 
-app.graph = model.graphData(nx.read_graphml("app/static/data/Big_component_enriched.graphml"))
-app.data = app.graph.json_data()
+index_to_path = {
+    "1": "app/static/data/Big_component_enriched.graphml",
+    "2": "app/static/data/Big_component_reduced.graphml"
+}
+
+app.graph = {
+    i: model.graphData(nx.read_graphml(index_to_path[i])) for i in index_to_path
+}
+
+app.data = {
+    i: graph.json_data() for i, graph in app.graph.items()
+}
+
+app.graph_index = "1"
+
 
 @app.route("/")
-def blank():
-    return render_template("index.html")
+def graph():
+    return render_template("home.html")
 
 
 @app.route("/favicon.ico")
@@ -20,15 +33,20 @@ def favicon():
     return send_from_directory('static', 'favicon.ico')
 
 
-@app.route("/data.json")
-def data_json():
-    return jsonify(app.data)
+@app.route("/data_<i>.json")
+def data_json(i):
+    return jsonify(app.data[i])
 
+
+@app.route("/graph=<i>")
+def choose_graph(i):
+    app.graph_index = i
+    return redirect("graph")
 
 @app.route("/<page>")
 @app.route("/<page>.html")
 def specific_page(page):
-    return render_template(page+".html")
+    return render_template(page+".html", graph_index=app.graph_index)
 
 
 @app.errorhandler(404)
