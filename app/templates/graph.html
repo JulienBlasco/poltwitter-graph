@@ -1,5 +1,7 @@
 {% extends "skeleton.html" %}
 {% set active_page = "Graph" %}
+{% set subheading = 'Visualisation du graphe des politiques' %}
+{% set icon = "icon-512" %}
 
 {% block pageContainer %}
 
@@ -10,7 +12,7 @@
 
 <script src={{ url_for('static', filename="js/my_script.js") }}></script>
 
-
+                </span>
                         <form name="display_pageranks">
                             <div class="form-group">
                                 <input type="range" name="Range" id="pr-range"
@@ -162,7 +164,7 @@ s.settings("hideEdgesOnMove", true);
 s.refresh()
 
 sigma.parsers.json(
-    "./data.json",
+    "./data_" + {{ graph_index }} +".json",
     s,
     function(graph) {
         load_graph(s);

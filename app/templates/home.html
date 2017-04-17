@@ -1,0 +1,15 @@
+{% extends "skeleton.html" %}
+{% set active_page = "Home" %}
+{% set title = "Bienvenue. Choisissez le graphe à utiliser." %}
+
+{% block pageContainer %}
+
+        <p>
+            <a role="button" href="graph=2" class="btn btn-lg btn-default">Graphe réduit</a>
+        </p>
+
+        <p>
+           <a role="button" href="graph=1" class="btn btn-lg btn-primary">Graphe complet</a>
+        </p>
+
+{% endblock %}
