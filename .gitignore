@@ -222,9 +222,8 @@ pip-log.txt
 output/
 data/
 temp/
-
-#Big Graph
-app/static/data/Big_component_enriched.gexf
+doc/
+app/static/data/
 
 #PyCharm
 .idea/
