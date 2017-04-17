@@ -10,7 +10,7 @@ class graphData():
                     "r": node["r"],
                     "g": node["g"],
                     "b": node["b"],
-                    "label": node["name"],
+                    "label": node["screen_name"],
                     "pagerank": node["pagerank_rt"],
                     "x": node["x"],
                     "y": -node["y"],
