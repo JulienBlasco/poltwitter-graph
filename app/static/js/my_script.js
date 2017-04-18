@@ -32,11 +32,14 @@ function implement_clickfunction(s) {
     });
 
     s.graph.edges().forEach(function(e) {
-      if (e.source==nodeId || e.target==nodeId)
-        e.color = e.originalColor;
+      if (e.source==nodeId || e.target==nodeId) {
+        pieces = e.originalColor.split(",")
+        e.color = pieces.slice(0,3).join(",")+",1)";
+        }
       else
-        e.color = '#eee';
+        e.color = 'rgba(197,197,197,0.1)';
     });
+    s.refresh();
   });
   // When the stage is clicked, we just color each
   // node and edge with its original color.
@@ -48,6 +51,7 @@ function implement_clickfunction(s) {
     s.graph.edges().forEach(function(e) {
       e.color = e.originalColor;
     });
+    s.refresh();
   });
 }
 
