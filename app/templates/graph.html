@@ -12,6 +12,9 @@
 
 <script src={{ url_for('static', filename="js/my_script.js") }}></script>
 
+<script src={{ url_for('static', filename="js/heartcode-canvasloader-min.js") }}></script>
+
+
 </span>
                 <div class="jumbotron">
                     <p>Ce graphe a été obtenu à partir de données récupérées sur Twitter durant les six derniers mois. Il a été construit de la manière suivante :</p>
@@ -90,7 +93,10 @@
                             </div>
                             <div class="panel-body">
                                 <div class="flot-chart">
-                                    <div class="flot-chart-content" id="sigma-container"></div>
+                                    <div class="flot-chart-content" id="sigma-container">
+                                        <div class="loader-box" id="loader-container">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -173,6 +179,11 @@ s.addRenderer({
   }
 );
 
+var cl = new CanvasLoader('loader-container');
+cl.setColor('#337ab7'); // default is '#000000'
+cl.setDiameter(60); // default is 40
+cl.show(); // Hidden by default
+
 s.settings('minNodeSize', 0.001);
 s.settings('maxNodeSize', 4);
 s.settings("hideEdgesOnMove", true);
@@ -183,6 +194,7 @@ sigma.parsers.json(
     s,
     function(graph) {
         load_graph(s);
+        cl.hide();
         s.refresh()
         }
 );
