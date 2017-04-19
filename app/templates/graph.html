@@ -21,6 +21,11 @@
                     <ul>
                     <li>Chaque noeud est le compte Twitter d'une personnalité, d'un parti ou d'une institution de la scène politique française. On compte environ 2500 noeuds dans ce graphe.</li>
                     <li>Un lien est tracé d'un noeud X vers un noeud Y si le compte X a retweeté le compte Y au moins une fois durant les six derniers mois.</li>
+                        <li>Les positions des points ont été calculées à partir d'un algorithme de spatialisation qui
+                            rapproche les points reliés entre eux et qui éloigne ceux qui n'ont pas de lien.</li>
+                        <li>Les clusters ont également été calculés par un algorithme de détection de communautés
+                            dans les graphes. Le label et la couleur ont ensuite été attribués manuellement en
+                            fonction du groupe politique jugé comme le mieux représenté par ce cluster.</li>
                     </ul>
                 </div>
 
