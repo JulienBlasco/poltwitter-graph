@@ -227,3 +227,6 @@ app/static/data/
 
 #PyCharm
 .idea/
+
+#Checkpoints
+code/.ipynb_checkpoints
