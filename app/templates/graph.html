@@ -15,7 +15,6 @@
 <script src={{ url_for('static', filename="js/heartcode-canvasloader-min.js") }}></script>
 
 
-</span>
                 <div class="jumbotron">
                     <p>Ce graphe a été obtenu à partir de données récupérées sur Twitter durant les six derniers mois. Il a été construit de la manière suivante :</p>
                     <ul>
@@ -23,9 +22,12 @@
                     <li>Un lien est tracé d'un noeud X vers un noeud Y si le compte X a retweeté le compte Y au moins une fois durant les six derniers mois.</li>
                         <li>Les positions des points ont été calculées à partir d'un algorithme de spatialisation qui
                             rapproche les points reliés entre eux et qui éloigne ceux qui n'ont pas de lien.</li>
+                        <li>La taille du noeud dépend de la valeur de son PageRank, c'est-à-dire un
+                            nombre qui est calculé algorithmiquement et qui caratérise la centralité du noeud au
+                            sein du graphe.</li>
                         <li>Les clusters ont également été calculés par un algorithme de détection de communautés
-                            dans les graphes. Le label et la couleur ont ensuite été attribués manuellement en
-                            fonction du groupe politique jugé comme le mieux représenté par ce cluster.</li>
+                            dans les graphes. La couleur est attribuée aléatoirement, et le nom du cluster est
+                            simplement le nom du compte au PageRank le plus élevé dans ce cluster.</li>
                     </ul>
                 </div>
 
@@ -50,43 +52,13 @@
 
                         <form name="display_clusters">
                             <div class="form-group">
-                            <label>Choix des clusters</label>
+                            <label>Choix des clusters</label><br>
+							        {% for value, id, label in graph_names %}
                                     <label class="checkbox-inline">
-                                        <input type="checkbox" id="checkCluster1"
-                                            name="Checkboxclusters"  onClick="print_clusters()"  checked="checked" value=1>NC
+                                        <input type="checkbox" id={{id}}
+                                            name="Checkboxclusters"  onClick="print_clusters()"  checked="checked" value={{value}}>{{label}}
                                     </label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox" id="checkCluster2"
-                                             name="Checkboxclusters"  onClick="print_clusters()" checked="checked" value=2>Gvt
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox" id="checkCluster3"
-                                            name="Checkboxclusters"  onClick="print_clusters()"  checked="checked" value=3>LR
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox" id="checkCluster4"
-                                           name="Checkboxclusters"   onClick="print_clusters()"  checked="checked" value=4>LR/UDI
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox" id="checkCluster5"
-                                            name="Checkboxclusters"  onClick="print_clusters()"  checked="checked" value=5>EELV
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox" id="checkCluster6"
-                                            name="Checkboxclusters" onClick="print_clusters()"  checked="checked" value=6>PS
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox" id="checkCluster7"
-                                            name="Checkboxclusters"  onClick="print_clusters()" checked="checked" value=7>EM
-                                    </label>
-                                    <label class="checkbox-inline">
-                                        <input type="checkbox" id="checkCluster8"
-                                             name="Checkboxclusters" onClick="print_clusters()" checked="checked" value=8>Modem
-                                    </label>
-                                     <label class="checkbox-inline">
-                                        <input type="checkbox" id="checkCluster9"
-                                             name="Checkboxclusters" onClick="print_clusters()" checked="checked" value=9>FN
-                                    </label>
+									{% endfor %}
                             </div>
                         </form>
 
@@ -107,74 +79,13 @@
                         </div>
                     </div>
                 </div>
-<script>
-document.getElementById("checkCluster1").addEventListener ("click", print_clusters, false);
-document.getElementById("checkCluster2").addEventListener ("click", print_clusters, false);
-document.getElementById("checkCluster3").addEventListener ("click", print_clusters, false);
-document.getElementById("checkCluster4").addEventListener ("click", print_clusters, false);
-document.getElementById("checkCluster5").addEventListener ("click", print_clusters, false);
-document.getElementById("checkCluster6").addEventListener ("click", print_clusters, false);
-document.getElementById("checkCluster7").addEventListener ("click", print_clusters, false);
-document.getElementById("checkCluster8").addEventListener ("click", print_clusters, false);
-document.getElementById("checkCluster9").addEventListener ("click", print_clusters, false);
-</script>
-
 
 <script>
-    /**
-** BORDER AROUND NODES
-*/
-
-    ;(function(undefined) {
-
-  /**
-   * Sigma Node Border Custom Renderer
-   * ==================================
-   *
-   * The aim of this simple node renderer is to enable the user to display
-   * colored node borders.
-   *
-   * Author: Guillaume Plique (Yomguithereal)
-   * Version: 0.0.1
-   */
-
-  sigma.canvas.nodes.border = function(node, context, settings) {
-    var prefix = settings('prefix') || '';
-
-    context.fillStyle = node.color || settings('defaultNodeColor');
-    context.beginPath();
-    context.arc(
-     node[prefix + 'x'],
-     node[prefix + 'y'],
-     node[prefix + 'size'],
-     0,
-     Math.PI * 2,
-     true
-    );
-
-    context.closePath();
-    context.fill();
-
-    context.lineWidth = node.borderWidth || 1;
-    context.strokeStyle = '#fff';
-    context.stroke();
-  };
-}).call(this);
+{% for value, id, label in graph_names %}
+document.getElementById("{{id}}").addEventListener ("click", print_clusters, false);
+{% endfor %}
 </script>
-<script>
-  // Add a method to the graph model that returns an
-  // object with every neighbors of a node inside:
-  sigma.classes.graph.addMethod('neighbors', function(nodeId) {
-    var k,
-        neighbors = {},
-        index = this.allNeighborsIndex[nodeId] || {};
 
-    for (k in index)
-      neighbors[k] = this.nodesIndex[k];
-
-    return neighbors;
-  });
-</script>
 <script>
 var s = new sigma();
 
@@ -192,6 +103,7 @@ cl.show(); // Hidden by default
 s.settings('minNodeSize', 0.001);
 s.settings('maxNodeSize', 4);
 s.settings("hideEdgesOnMove", true);
+s.settings("labelThreshold",7);
 s.refresh()
 
 sigma.parsers.json(

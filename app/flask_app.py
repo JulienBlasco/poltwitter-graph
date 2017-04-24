@@ -20,6 +20,7 @@ app.data = {
     i: graph.json_data() for i, graph in app.graph.items()
 }
 
+
 app.graph_index = "1"
 
 
@@ -35,7 +36,11 @@ def favicon():
 
 @app.route("/data_<i>.json")
 def data_json(i):
-    return jsonify(app.data[i])
+    return jsonify(app.data[i]["graph"])
+
+@app.route("/names_data_<i>.json")
+def names_data_json(i):
+    return jsonify(app.data[i]["names"])
 
 
 @app.route("/graph=<i>")
@@ -46,7 +51,9 @@ def choose_graph(i):
 @app.route("/<page>")
 @app.route("/<page>.html")
 def specific_page(page):
-    return render_template(page+".html", graph_index=app.graph_index)
+    return render_template(page+".html",
+                           graph_index=app.graph_index,
+                           graph_names=app.data[app.graph_index]["names"])
 
 
 @app.errorhandler(404)

@@ -22,7 +22,7 @@ class graphData():
             else:
                 class_to_cluster[sorted_counts[i][0]] = 9
 
-        return {
+        graph_data = {
             "nodes": [
                 {
                     "id": node["id_str"],
@@ -49,4 +49,20 @@ class graphData():
                 }
                 for s,t,edge in self.graph.edges(data=True)
             ]
+        }
+
+        graph_noms_des_clusters = [
+            (i+1, "checkCluster"+str(i+1), node[0]) for i, node in
+                enumerate([
+                sorted({
+                    n["label"]: n["pagerank"]
+                    for n in graph_data["nodes"] if n["modularity_class"] == i+1
+                       }.items(), key=operator.itemgetter(1), reverse=True)[0]
+                for i in range(9)
+            ])
+        ]
+
+        return {
+            "graph": graph_data,
+            "names": graph_noms_des_clusters
         }
