@@ -54,7 +54,7 @@
 /**
 * ON GRAPH LOADING
 */
-function implement_clickfunction(s) {
+function implement_clickfunction(s, opacity = "0.2") {
   // We first need to save the original colors of our
   // nodes and edges, like this:
   s.graph.nodes().forEach(function(n) {
@@ -62,7 +62,7 @@ function implement_clickfunction(s) {
     n.originalColor = n.color;
   });
   s.graph.edges().forEach(function(e) {
-    e.color = "rgba(" + [e.r,e.g,e.b,"0.2"].join(",") + ")";
+    e.color = "rgba(" + [e.r,e.g,e.b,opacity].join(",") + ")";
     e.originalColor = e.color;
   });
 
@@ -122,7 +122,7 @@ function load_graph(s) {
     });
     implement_clickfunction(s);
     s.graph.threshold = 0;
-    print_pageranks(1-parseFloat(document.getElementById("pr-range").value));
+    print_pageranks(1-pr_range);
     print_clusters();
 }
 

@@ -6,4 +6,118 @@
 {% block pageContainer %}
 
 
+                <form role="form">
+                    <div class="form-group" style="width: 50%">
+                        <label>Choix du cluster</label>
+                        <select class="form-control">
+                            {% for i, value, label in graph_names %}
+                                <option>Cluster {{ label }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </form>
+
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="icon-512"></i> Graphe des retweets</h3>
+                            </div>
+                            <div class="panel-body" style="overflow: auto">
+                                <div class="flot-chart">
+                                    <div class="flot-chart-content" id="sigma-container" style="overflow: auto">
+                                        <div class="loader-box" id="loader-container" style="overflow: auto">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                .col-lg-6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+                <div class="row">
+                    <div class="col-lg-6 text-center">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                .col-lg-6
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 text-center">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                .col-lg-6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.row -->
+
+<script>
+
+var s = new sigma();
+
+s.addRenderer({
+  container: 'sigma-container',
+  type: 'canvas'
+  }
+);
+
+var cl = new CanvasLoader('loader-container');
+cl.setColor('#337ab7'); // default is '#000000'
+cl.setDiameter(60); // default is 40
+cl.show(); // Hidden by default
+
+s.settings('minNodeSize', 0.2);
+s.settings('maxNodeSize', 7);
+s.settings("hideEdgesOnMove", true);
+s.settings("labelThreshold",7);
+s.refresh()
+
+pr_range = 0.2;
+
+var graph_data;
+var graph_data_pageranks;
+var q;
+$.getJSON(
+    "./data_" + {{ graph_index }} +".json",
+    function(data) {
+        graph_data = data;
+        graph_data_pageranks = graph_data.nodes.map(n=>n.pagerank);
+        q = quantile(graph_data_pageranks, 1-pr_range);
+        graph_data_current_nodes = graph_data.nodes.filter( function(el){
+            return el.modularity_class == 2 && el.pagerank >= q;
+        });
+        graph_data_current_nodes_ids = graph_data_current_nodes.map(n=>n.id);
+
+        graph_data_current = {
+            "nodes": graph_data_current_nodes,
+            "edges": graph_data.edges.filter( function(el) {
+                return graph_data_current_nodes_ids.includes(el.source) &&
+                    graph_data_current_nodes_ids.includes(el.target);
+                })};
+
+        s.graph.read(graph_data_current);
+        s.graph.nodes().forEach(function(node) {
+            node.type = 'border';
+        });
+        implement_clickfunction(s, "0.05");
+        cl.hide();
+        s.refresh();
+    });
+
+
+
+</script>
+
+
 {% endblock %}
