@@ -291,3 +291,47 @@ function transparent_edges() {
     });
     s.refresh();
 }
+
+/***
+CHANGE CLUSTERED GRAPH
+**/
+function print_clustered_graph (cluster) {
+    s.graph.clear();
+    s.refresh();
+    s = new sigma();
+    s.addRenderer({
+      container: 'sigma-container',
+      type: 'canvas'
+      }
+    );
+
+    s.settings('minNodeSize', 0.2);
+    s.settings('maxNodeSize', 7);
+    s.settings("hideEdgesOnMove", true);
+    s.settings("labelThreshold",7);
+    graph_data_current_nodes = graph_data.nodes.filter( function(el){
+        return el.modularity_class == cluster;
+    });
+    graph_data_current_pageranks = graph_data_current_nodes.map(n=>n.pagerank);
+    q = quantile(graph_data_current_pageranks, 1-pr_range);
+
+    graph_data_current_nodes = graph_data_current_nodes.filter( function(el){
+        return el.pagerank >= q;
+    });
+    graph_data_current_nodes_ids = graph_data_current_nodes.map(n=>n.id);
+
+    graph_data_current = {
+        "nodes": graph_data_current_nodes,
+        "edges": graph_data.edges.filter( function(el) {
+            return graph_data_current_nodes_ids.includes(el.source) &&
+                graph_data_current_nodes_ids.includes(el.target);
+            })};
+
+    s.graph.read(graph_data_current);
+    s.graph.nodes().forEach(function(node) {
+        node.type = 'border';
+    });
+    implement_clickfunction(s, "0.05");
+    cl.hide();
+    s.refresh();
+}
