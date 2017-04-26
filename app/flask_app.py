@@ -56,6 +56,11 @@ def specific_page(page):
                            graph_names=app.data[app.graph_index]["names"])
 
 
+@app.route("/barchart_data_<cluster>")
+def barchart_data_json(cluster):
+    return jsonify(model.json_barchart(app.data[app.graph_index]["graph"]["nodes"], cluster=cluster))
+
+
 @app.errorhandler(404)
 def ma_page_404(error):
     return "Ma jolie page 404", 404

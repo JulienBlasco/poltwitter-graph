@@ -10,7 +10,7 @@
                     <div class="form-group" style="width: 50%">
                         <label>Choix du cluster</label>
                         <select id="cluster_select" class="form-control"
-                                onchange="print_clustered_graph(parseFloat(this.value))">
+                                onchange="change_cluster_stats(parseFloat(this.value))">
                             {% for i, value, label in graph_names %}
                                 <option value={{i}}>Cluster {{ label }}</option>
                             {% endfor %}
@@ -37,8 +37,11 @@
                     </div>
                     <div class="col-lg-6 text-center">
                         <div class="panel panel-default">
-                            <div class="panel-body">
-                                .col-lg-6
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="icon-bar-chart"></i> Top influenceurs</h3>
+                            </div>
+                            <div class="panel-body" id="barChartContainer">
+                                <canvas id="barChart""></canvas>
                             </div>
                         </div>
                     </div>
@@ -63,8 +66,8 @@
                 </div>
                 <!-- /.row -->
 
+<!-- AFFICHAGE GRAPHE -->
 <script>
-
 var s = new sigma();
 
 var cl = new CanvasLoader('loader-container');
@@ -72,19 +75,28 @@ cl.setColor('#337ab7'); // default is '#000000'
 cl.setDiameter(60); // default is 40
 cl.show(); // Hidden by default
 
+var barchart_ctx = document.getElementById("barChart");
+var myBarChart = new Chart(barchart_ctx, {
+    type: 'bar',
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true,
+                }
+            }]
+        }
+    }
+});
 
 pr_range = 0.2;
-
 var graph_data;
 $.getJSON(
     "./data_" + {{ graph_index }} +".json",
     function(data) {
         graph_data = data;
-        print_clustered_graph(parseFloat($( "#cluster_select" ).val()));
+        change_cluster_stats(parseFloat($( "#cluster_select" ).val()));
     });
-
-
-
 </script>
 
 

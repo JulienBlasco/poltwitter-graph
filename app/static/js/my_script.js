@@ -295,6 +295,11 @@ function transparent_edges() {
 /***
 CHANGE CLUSTERED GRAPH
 **/
+function change_cluster_stats (cluster) {
+    print_clustered_graph(cluster);
+    print_clustered_barchart (cluster);
+}
+
 function print_clustered_graph (cluster) {
     s.graph.clear();
     s.refresh();
@@ -334,4 +339,13 @@ function print_clustered_graph (cluster) {
     implement_clickfunction(s, "0.05");
     cl.hide();
     s.refresh();
+}
+
+function print_clustered_barchart (cluster) {
+    $.getJSON(
+    "./barchart_data_" + cluster,
+    function(data) {
+        myBarChart.chart.config.data = data;
+        myBarChart.update();
+    });
 }

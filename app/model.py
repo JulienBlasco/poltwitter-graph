@@ -66,3 +66,34 @@ class graphData():
             "graph": graph_data,
             "names": graph_noms_des_clusters
         }
+
+
+def json_barchart(nodes, criterium="pagerank", top=5, cluster=1):
+    top_accounts = sorted(
+        [
+            n for n in nodes
+            if n["modularity_class"] == int(cluster)
+        ],
+        key=lambda n: n[criterium],
+        reverse=True
+    )[:top]
+
+    node = top_accounts[0]
+    return {
+        "labels": [n["label"] for n in top_accounts],
+        "datasets": [
+            {
+                "label": criterium,
+                "backgroundColor": 'rgba(' + ",".join([
+                    str(c) for c in [node["r"], node["g"], node["b"]]
+                ]) + ',0.2)',
+                "borderColor": 'rgba(' + ",".join([
+                    str(c) for c in [node["r"], node["g"], node["b"]]
+                ]) + ',1)',
+                "borderWidth": 1,
+                "data": [
+                    100 * n[criterium] / node[criterium] for n in top_accounts
+                ]
+            }
+        ]
+    }
