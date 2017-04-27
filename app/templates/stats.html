@@ -27,7 +27,8 @@
                             </div>
                             <div class="panel-body" style="overflow: auto">
                                 <div class="flot-chart">
-                                    <div class="flot-chart-content" id="sigma-container" style="overflow: auto">
+                                    <div class="flot-chart-content" id="sigma-container"
+                                         style="overflow: auto">
                                         <div class="loader-box" id="loader-container" style="overflow: auto">
                                         </div>
                                     </div>
@@ -41,7 +42,7 @@
                                 <h3 class="panel-title"><i class="icon-bar-chart"></i> Top influenceurs</h3>
                             </div>
                             <div class="panel-body" id="barChartContainer">
-                                <canvas id="barChart""></canvas>
+                                <canvas id="barChart"></canvas>
                             </div>
                         </div>
                     </div>
@@ -51,8 +52,11 @@
                 <div class="row">
                     <div class="col-lg-6 text-center">
                         <div class="panel panel-default">
-                            <div class="panel-body">
-                                .col-lg-6
+                            <div class="panel-heading">
+                                <h3 class="panel-title"><i class="fa fa-cloud"></i> Nuage de mots</h3>
+                            </div>
+                            <div class="panel-body" style="overflow: auto;">
+                                <div id="demo" style="position: relative; height:350px"></div>
                             </div>
                         </div>
                     </div>
@@ -88,6 +92,8 @@ var myBarChart = new Chart(barchart_ctx, {
         }
     }
 });
+
+$('#demo').jQCloud();
 
 pr_range = 0.2;
 var graph_data;

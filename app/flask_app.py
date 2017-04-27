@@ -61,6 +61,11 @@ def barchart_data_json(cluster):
     return jsonify(model.json_barchart(app.data[app.graph_index]["graph"]["nodes"], cluster=cluster))
 
 
+@app.route("/wordcloud_data_<cluster>")
+def wordcloud_data_json(cluster):
+    return jsonify(app.graph[app.graph_index].json_words(cluster=cluster))
+
+
 @app.errorhandler(404)
 def ma_page_404(error):
     return "Ma jolie page 404", 404

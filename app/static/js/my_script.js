@@ -298,6 +298,7 @@ CHANGE CLUSTERED GRAPH
 function change_cluster_stats (cluster) {
     print_clustered_graph(cluster);
     print_clustered_barchart (cluster);
+    print_clustered_wordcloud (cluster);
 }
 
 function print_clustered_graph (cluster) {
@@ -347,5 +348,14 @@ function print_clustered_barchart (cluster) {
     function(data) {
         myBarChart.chart.config.data = data;
         myBarChart.update();
+    });
+}
+
+function print_clustered_wordcloud (cluster) {
+    $.getJSON(
+    "./wordcloud_data_" + cluster,
+    function(data) {
+        var words = data;
+        $('#demo').jQCloud('update', data);
     });
 }
