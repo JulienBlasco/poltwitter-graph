@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts-icomoon/icomoon.eot?j1hy6d');
-  src:  url('../fonts-icomoon/icomoon.eot?j1hy6d#iefix') format('embedded-opentype'),
-    url('../fonts-icomoon/icomoon.ttf?j1hy6d') format('truetype'),
-    url('../fonts-icomoon/icomoon.woff?j1hy6d') format('woff'),
-    url('../fonts-icomoon/icomoon.svg?j1hy6d#icomoon') format('svg');
+  src:  url('../fonts-icomoon/icomoon.eot?j5ay05');
+  src:  url('../fonts-icomoon/icomoon.eot?j5ay05#iefix') format('embedded-opentype'),
+    url('../fonts-icomoon/icomoon.ttf?j5ay05') format('truetype'),
+    url('../fonts-icomoon/icomoon.woff?j5ay05') format('woff'),
+    url('../fonts-icomoon/icomoon.svg?j5ay05#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,14 +24,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-comment:before {
-  content: "\f075";
-}
 .icon-bar-chart:before {
   content: "\f080";
 }
 .icon-bar-chart-o:before {
   content: "\f080";
+}
+.icon-hashtag:before {
+  content: "\f292";
+}
+.icon-percent:before {
+  content: "\f295";
 }
 .icon-512:before {
   content: "\e900";
