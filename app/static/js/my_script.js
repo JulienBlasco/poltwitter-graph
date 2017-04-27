@@ -299,6 +299,7 @@ function change_cluster_stats (cluster) {
     print_clustered_graph(cluster);
     print_clustered_barchart (cluster);
     print_clustered_wordcloud (cluster);
+    print_clustered_statistics(cluster);
 }
 
 function print_clustered_graph (cluster) {
@@ -359,5 +360,21 @@ function print_clustered_wordcloud (cluster) {
         var words = data;
         $('#demo').jQCloud('update', data);
         cl2.hide();
+    });
+}
+
+function print_clustered_statistics(cluster) {
+    $.getJSON(
+    "/statistics_" + cluster,
+    function (data) {
+        $("#stats_container").html(
+        '<ul class="list-group">'
+        + '<li class="list-group-item">Nombre de noeuds : <b>' + data.number_of_nodes + '</b></li>'
+        + '<li class="list-group-item">Nombre de liens : <b>' + data.number_of_edges + '</b></li>'
+        + '<li class="list-group-item">Degré moyen : <b>' + data.average_degree + '</b></li>'
+        + '<li class="list-group-item">Densité de liens : <b>' + data.density + '%</b></li>'
+        + '<li class="list-group-item">Taux de clustering moyen : <b>' + data.average_clustering + '%</b></li>'
+        + '</ul>'
+        );
     });
 }

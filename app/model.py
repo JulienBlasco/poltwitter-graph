@@ -1,7 +1,7 @@
 from collections import Counter
 import operator
-import os
 import json
+import networkx as nx
 
 class graphData():
     def __init__(self, graph):
@@ -97,6 +97,19 @@ class graphData():
         # ], file)
         with open("../data/json_words_" + str(cluster) + ".json") as file:
             return json.load(file)[:top]
+
+    def get_statistics(self, nodes, cluster=1):
+        ids = [
+            n["id"] for n in nodes if n["modularity_class"] == int(cluster)
+        ]
+        H = self.graph.subgraph(ids)
+        return {
+            "number_of_nodes": H.number_of_nodes(),
+            "number_of_edges": H.number_of_edges() ,
+            "average_degree": '%.2f'%(H.number_of_edges()/H.number_of_nodes()),
+            "average_clustering": '%.2f'%(nx.average_clustering(nx.Graph(H))*100),
+            "density": '%.2f'%(nx.density(H)*100)
+        }
 
 
 def json_barchart(nodes, criterium="pagerank", top=5, cluster=1):

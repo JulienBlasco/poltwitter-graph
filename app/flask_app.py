@@ -77,6 +77,11 @@ def wordcloud_data_json(cluster):
         return jsonify(app.wordcloud[cluster])
 
 
+@app.route("/statistics_<cluster>")
+def statistics(cluster):
+    return jsonify(app.graph[app.graph_index].get_statistics(app.data[app.graph_index]["graph"]["nodes"],
+                                                             cluster=cluster))
+
 
 @app.errorhandler(404)
 def ma_page_404(error):
