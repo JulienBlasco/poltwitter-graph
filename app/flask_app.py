@@ -23,6 +23,12 @@ app.data = {
 
 app.graph_index = "1"
 
+print("start wordclouds")
+app.wordcloud = {
+    str(c): app.graph[app.graph_index].json_words(
+        nodes=app.data[app.graph_index]["graph"]["nodes"],
+        cluster=c) for c in range(1, 10)
+}
 
 @app.route("/")
 def graph():
@@ -63,7 +69,7 @@ def barchart_data_json(cluster):
 
 @app.route("/wordcloud_data_<cluster>")
 def wordcloud_data_json(cluster):
-    return jsonify(app.graph[app.graph_index].json_words(cluster=cluster))
+    return jsonify(app.wordcloud[cluster])
 
 
 @app.errorhandler(404)

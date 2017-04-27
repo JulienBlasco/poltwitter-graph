@@ -1,5 +1,7 @@
 from collections import Counter
 import operator
+import os
+import json
 
 class graphData():
     def __init__(self, graph):
@@ -67,20 +69,34 @@ class graphData():
             "names": graph_noms_des_clusters
         }
 
-    def json_words(self, cluster=1, top=20):
-        # TODO: filtrer les noeuds du graphe suivant le cluster
-        # TODO: recuperer lensemble des tweets et les tokenizer
-        # TODO: prendre les top mots les plus utilises
-        # TODO: cosntruire le JSON qui va bien
-        return [
-      {"text": cluster, "weight": 13},
-      {"text": "Ipsum", "weight": 10.5},
-      {"text": "Dolor", "weight": 9.4},
-      {"text": "Sit", "weight": 8},
-      {"text": "Amet", "weight": 6.2},
-      {"text": "Consectetur", "weight": 5},
-      {"text": "Adipiscing", "weight": 5}
-    ]
+    def json_words(self, nodes, cluster=1, top=20):
+        # ids = [
+        #     n["id"] for n in nodes if n["modularity_class"] == int(cluster)
+        # ]
+        # hashtags = []
+        # hashtag_counts = Counter(hashtags)
+        # print(len(ids))
+        # for id in ids:
+        #     with open("../data/11 - topolitiq_2017-03-23_friends_tweets/" + id + ".tweets") as tweet_file:
+        #         user_tweets = json.load(tweet_file)
+        #         user_hashtags = [
+        #             h["text"].lower() for t in user_tweets for h in t["entities"]["hashtags"]
+        #         ]
+        #         hashtag_counts.update(user_hashtags)
+        # sorted_hashtags = sorted(hashtag_counts.items(),
+        #                          key=operator.itemgetter(1),
+        #                          reverse=True)[:(100 if len(hashtag_counts)>100 else len(hashtag_counts))]
+        # print("Finished wordcloud " + str(cluster))
+        # with open("../data/json_words_" + str(cluster) + ".json", "w") as file:
+        #     json.dump( [
+        #         {
+        #             "text": hashtag[0],
+        #             "weight": hashtag[1]
+        #         }
+        #         for hashtag in sorted_hashtags
+        # ], file)
+        with open("../data/json_words_" + str(cluster) + ".json") as file:
+            return json.load(file)[:top]
 
 
 def json_barchart(nodes, criterium="pagerank", top=5, cluster=1):

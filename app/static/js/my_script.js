@@ -352,10 +352,12 @@ function print_clustered_barchart (cluster) {
 }
 
 function print_clustered_wordcloud (cluster) {
+    cl2.show();
     $.getJSON(
     "./wordcloud_data_" + cluster,
     function(data) {
         var words = data;
         $('#demo').jQCloud('update', data);
+        cl2.hide();
     });
 }
