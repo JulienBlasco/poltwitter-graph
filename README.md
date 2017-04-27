@@ -12,4 +12,5 @@
 </ul>
 </li>
 <li><b>output/</b> contient les graphes construits avec python et gephi <b>(pas dans le github)</b></li>
+<li><b>data/</b> contient les tweets récupérés avec python et l'API Twitter <b>(pas dans le github)</b></li>
 </ul>
