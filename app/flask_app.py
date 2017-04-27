@@ -23,7 +23,7 @@ app.data = {
 
 app.graph_index = "1"
 
-print("start wordclouds")
+
 app.wordcloud = {
     str(c): app.graph[app.graph_index].json_words(
         nodes=app.data[app.graph_index]["graph"]["nodes"],
@@ -69,7 +69,13 @@ def barchart_data_json(cluster):
 
 @app.route("/wordcloud_data_<cluster>")
 def wordcloud_data_json(cluster):
-    return jsonify(app.wordcloud[cluster])
+    if app.graph_index == "2":
+        return jsonify([{
+            "text": "nuage non pertinent pour le petit graphe",
+            "weight": 1}])
+    else:
+        return jsonify(app.wordcloud[cluster])
+
 
 
 @app.errorhandler(404)
