@@ -3,7 +3,7 @@
  
 ## Structure du projet
 <ul>
-<li><b>code/</b> contient le code pour récupérer les tweets, construire les graphes et effectuer les analyses</li>
+<li><b>code/</b> contient le code pour récupérer les tweets, construire les graphes et effectuer des calculs </li>
 <li><b>app/</b> contient l'appli web :
 <ul>
 <li>scripts Python qui permettent de charger, traiter les données et lancer le serveur</li>
