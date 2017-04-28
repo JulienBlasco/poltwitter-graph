@@ -25,9 +25,11 @@
                             <div class="panel-heading">
                                 <h3 class="panel-title"><i class="fa fa-calculator"></i> Statistiques générales</h3>
                             </div>
-                            <div class="panel-body">
+                            <div class="panel-body" style="margin: auto;">
                                 <div id="stats_container" style="position: relative;">
                                 </div>
+                                <div class="loader-box" id="loader-container3"
+                                     style="overflow: auto; height:350px"></div>
                             </div>
                         </div>
                     </div>
@@ -54,8 +56,7 @@
                                 <div class="flot-chart">
                                     <div class="flot-chart-content" id="sigma-container"
                                          style="overflow: auto">
-                                        <div class="loader-box" id="loader-container" style="overflow: auto">
-                                        </div>
+                                        <div class="loader-box" id="loader-container" style="overflow: auto"></div>
                                     </div>
                                 </div>
                             </div>
@@ -67,7 +68,7 @@
                                 <h3 class="panel-title"><i class="fa fa-cloud"></i> Nuage de hashtags</h3>
                             </div>
                             <div class="panel-body" style="overflow: auto;">
-                                <div id="demo" style="position: relative; height:350px">
+                                <div id="demo" style="position: relative; height:400px">
                                     <div class="loader-box" id="loader-container2" style="overflow: auto">
                                 </div>
                                 </div>
@@ -90,6 +91,11 @@ var cl2 = new CanvasLoader('loader-container2');
 cl2.setColor('#337ab7'); // default is '#000000'
 cl2.setDiameter(60); // default is 40
 cl2.show(); // Hidden by default
+
+var cl3 = new CanvasLoader('loader-container3');
+cl3.setColor('#337ab7'); // default is '#000000'
+cl3.setDiameter(60); // default is 40
+cl3.show(); // Hidden by default
 
 var barchart_ctx = document.getElementById("barChart");
 var myBarChart = new Chart(barchart_ctx, {

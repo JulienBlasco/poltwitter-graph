@@ -364,6 +364,7 @@ function print_clustered_wordcloud (cluster) {
 }
 
 function print_clustered_statistics(cluster) {
+    cl3.show();
     $.getJSON(
     "/statistics_" + cluster,
     function (data) {
@@ -376,5 +377,6 @@ function print_clustered_statistics(cluster) {
         + '<li class="list-group-item">Taux de clustering moyen : <b>' + data.average_clustering + '%</b></li>'
         + '</ul>'
         );
+        cl3.hide();
     });
 }
